@@ -1,0 +1,36 @@
+p1=0.40; //probability
+p2=0.25;
+p3=0.15;
+p4=0.10;
+p5=0.05;
+p6=0.03;
+p7=0.02;
+I1=log2(1/p1); //Information
+I2=log2(1/p2);
+I3=log2(1/p3);
+I4=log2(1/p4);
+I5=log2(1/p5);
+I6=log2(1/p6);
+I7=log2(1/p7);
+disp(I1);
+disp(I2);
+disp(I3);
+disp(I4);
+disp(I5);
+disp(I6);
+disp(I7);
+H=I1*p1+I2*p2+I3*p3+I4*p4+I5*p5+I6*p6+I7*p7;
+disp(H); //Entropy
+L1=1;
+L2=2;
+L3=3;
+L4=4;
+L5=5;
+L6=6;
+L7=6;
+L=L1*p1+L2*p2+L3*p3+L4*p4+L5*p5+L6*p6+L7*p7; //length of code
+disp(L);
+E=(H/L)*100; //Efficiency
+disp(E);
+R=100-E; //Redundancy
+disp(R);
