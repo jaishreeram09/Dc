@@ -1,0 +1,18 @@
+r=1/(1*10^-6);
+disp(r); //Message rate
+p1=0.4; //probability
+p2=0.3; //probability
+p3=0.2; //probability
+p4=0.1; //probability
+I1=log2(1/p1); //Information
+I2=log2(1/p2);
+I3=log2(1/p3);
+I4=log2(1/p4);
+disp(I1);
+disp(I2);
+disp(I3);
+disp(I4);
+H=I1*p1+I2*p2+I3*p3+I4*p4;
+disp(H); //Entropy
+R=r*H;
+disp(R); //Information Rate
