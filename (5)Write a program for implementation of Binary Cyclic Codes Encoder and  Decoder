@@ -1,0 +1,12 @@
+Program:
+clc;
+clear all;
+k=input('Enter the length of the message word:');
+n=input('Enter the length of the Code word:');
+m=input('Enter the message word');
+G=cyclpoly(n,k,'max')
+gx=poly2sym(G) %generates the generator polynomial
+C=encode(m,n,k,'cyclic',G) % Cyclic codes encoding
+C(1)=~C(1) % first bit is in error
+D=decode(C,n,k,'cyclic',G) % Cyclic codes decoding
+numerr = biterr(m,D) % decoding is done correctly
