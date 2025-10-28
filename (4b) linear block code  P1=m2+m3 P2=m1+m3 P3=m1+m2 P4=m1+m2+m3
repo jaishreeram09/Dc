@@ -1,0 +1,17 @@
+clc;
+n=7; //length of code
+k=4; // parity bits
+q=n-k; //message bit
+I=eye(k,k); //identity matrix
+disp(I,"Identity matrix=");
+P=[0,1,1; 1,0,1; 1,1,0; 1,1,1]; //parity equations
+disp(P,"Parity matrix=");
+G=[I,P]; //Generator matrix
+disp(G,"Generator matrix=");
+H=[P',eye(k-1,k-1)];
+disp(H,"Parity check matrix="); //Parity check matrix
+M=[0,0,0,0;0,0,0,1;0,0,1,0;0,0,1,1;0,1,0,0;0,1,0,1;0,1,1,0;0,1,1,1;1,0,0,0;
+1,0,0,1;1,0,1,0;1,0,1,1;1,1,0,0;1,1,0,1;1,1,1,0;1,1,1,1]; //message matrix
+C=M*G; //code word
+D=modulo(C,2); //code word table
+disp(D,"Codeword table=");
