@@ -1,0 +1,19 @@
+fm=2000; //modulating frequency
+r=2*fm;
+disp(r); //Message rate
+pA=1/5; //probability
+pB=1/4; //probability
+pC=1/4; //probability
+pD=3/10; //probability
+I1=log2(1/pA); //Information
+I2=log2(1/pB);
+I3=log2(1/pC);
+I4=log2(1/pD);
+disp(I1);
+disp(I2);
+disp(I3);
+disp(I4);
+H=I1*pA+I2*pB+I3*pC+I4*pD;
+disp(H); //Entropy
+R=r*H;
+disp(R);
