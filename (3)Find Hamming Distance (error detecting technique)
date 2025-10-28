@@ -1,0 +1,11 @@
+Hamming Distance (error detecting technique) using Scilab
+// Getting Code Words
+clear ;
+clc ;
+I = input ('Enter the data codeword one ‘);
+Q = input ('Enter the data codeword two’);
+Hamming_Distance = 0;
+for i = 1:length (I)
+Hamming_Distance = Hamming_Distance + bitxor(I(i),Q(i)) ;
+end
+disp (Hamming_Distance);
